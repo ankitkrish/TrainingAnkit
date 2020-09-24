@@ -1,0 +1,23 @@
+<?php
+$blockObj = $block->getLayout()->createBlock('TrainingAnkit\DailyDeal\Block\Product\View');
+if($blockObj->getStatus() && $blockObj->getPriceCountDown())
+{
+    ?>
+    <div class="title"><?php echo "Deal Start"; ?></div>
+    <div id="countdowntimer" class="countdowntimer"><span id="future_date"><span></div>
+    <script>
+        require([
+            'jquery',
+            'TrainingAnkit_DailyDeal/js/jquery.countdownTimer'
+        ], function ($) {
+            console.log('countdowntimer start');
+            jQuery("#future_date").countdowntimer({
+                startDate : "<?php echo str_replace('-','/',$block->getDealFrom()); ?>",
+                dateAndTime : "<?php echo str_replace('-','/',$block->getDealTo()); ?>",
+                size : "lg",
+                regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+                regexpReplaceWith: "$1<sup>days</sup> / $2<sup>hours</sup> / $3<sup>minutes</sup> / $4<sup>seconds</sup>"
+            });
+        });
+    </script>
+<?php } ?>
