@@ -11,7 +11,7 @@ $obj = $bootstrap->getObjectManager();
 $storeManager = $obj->get('\Magento\Store\Model\StoreManagerInterface');
 $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();  
 $state = $objectManager->get('Magento\Framework\App\State');
-$state->setAreaCode('frontend');
+$state->setAreaCode('adminhtml');
 
 $product_id = 2;
 $product = $objectManager->get('Magento\Catalog\Model\Product')->load($product_id);
