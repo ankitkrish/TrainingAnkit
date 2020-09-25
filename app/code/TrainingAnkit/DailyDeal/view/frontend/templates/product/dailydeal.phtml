@@ -1,0 +1,48 @@
+<?php
+/**
+ * TrainingAnkit
+ * Copyright (C) 2019 TrainingAnkit <info@magentocoders.com>
+ *
+ * NOTICE OF LICENSE
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    TrainingAnkit
+ * @package     TrainingAnkit_DailyDeal
+ * @copyright   Copyright (c) 2012 MagentoCoders (http://www.magentocoders.com/)
+ * @license     http://www.TrainingAnkit.com/license-agreement.html
+ * @author      MagentoCoders <info@magentocoders.com>
+ */
+
+if ($block->getStatus() && $block->getPriceCountDown()) {
+    date_default_timezone_set("Asia/Kolkata");
+    if ($block->getDealFrom() < date('Y-m-d H:i:s') && $block->getDealTo() > date('Y-m-d H:i:s')) {
+        ?>
+        <div class="title"><?= /* @noEscape */ __("Deal Ends In"); ?></div>
+        <div id="countdowntimer" class="countdowntimer"><span id="future_date"><span></div>
+        <script>
+            require([
+                'jquery',
+                'TrainingAnkit_DailyDeal/js/jquery.countdownTimer'
+            ], function ($) {
+                $("#future_date").countdowntimer({
+                startDate : "<?=  /* @noEscape */ str_replace('-', '/', date('Y/m/d H:i:s')); ?>",
+                dateAndTime : "<?=  /* @noEscape */ str_replace('-', '/', $block->getDealTo()); ?>",
+                size : "lg",
+                regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+                regexpReplaceWith: "$1<sup>days</sup> / $2<sup>hours</sup> / $3<sup>minutes</sup>/ $4<sup>seconds</sup>"
+            });
+            });
+        </script>
+        <?php
+    }
+}?>
