@@ -88,7 +88,7 @@ class ProductAttribute implements DataPatchInterface {
          $eavSetup->addAttribute('catalog_product', 'deal_sell_from', [
              'group'              => 'Dailydeal',
              'type' => 'datetime',
-             'input' => 'datetime',
+             'input' => 'date',
              'label' => 'Deal From',
              'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime',
              'class' => 'validate-date',
@@ -111,7 +111,7 @@ class ProductAttribute implements DataPatchInterface {
         $eavSetup->addAttribute('catalog_product', 'deal_sell_to', [
             'group'              => 'Dailydeal',
             'type' => 'datetime',
-            'input' => 'datetime',
+            'input' => 'date',
             'label' => 'Deal To',
             'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime',
             'class' => 'validate-date',

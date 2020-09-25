@@ -22,24 +22,27 @@
  * @license     http://www.TrainingAnkit.com/license-agreement.html
  * @author      MagentoCoders <info@magentocoders.com>
  */
-$blockObj = $block->getLayout()->createBlock('TrainingAnkit\DailyDeal\Block\Product\View');
-if($blockObj->getStatus() && $blockObj->getPriceCountDown() && ($blockObj->getDealTo()!= date('Y/m/d H:i:s')))
-{
-    ?>
-    <div class="title"><?php echo "Deal Start"; ?></div>
-    <div id="countdowntimer" class="countdowntimer"><span id="future_date"><span></div>
-    <script>
-        require([
-            'jquery',
-            'TrainingAnkit_DailyDeal/js/jquery.countdownTimer'
-        ], function ($) {
-            jQuery("#future_date").countdowntimer({
-                startDate : "<?php echo str_replace('-','/',$block->getDealFrom()); ?>",
-                dateAndTime : "<?php echo str_replace('-','/',$block->getDealTo()); ?>",
-                size : "lg",
-                regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
-                regexpReplaceWith: "$1<sup>days</sup> / $2<sup>hours</sup> / $3<sup>minutes</sup> / $4<sup>seconds</sup>"
+//$blockObj = $block->getLayout()->createBlock('TrainingAnkit\DailyDeal\Block\Product\View');
+if($this->getStatus() && $this->getPriceCountDown()) {
+    date_default_timezone_set("Asia/Kolkata");
+    if($this->getDealFrom() < date('Y-m-d H:i:s') && $this->getDealTo() > date('Y-m-d H:i:s')) {
+        ?>
+        <div class="title"><?= __("Deal Ends In"); ?></div>
+        <div id="countdowntimer" class="countdowntimer"><span id="future_date"><span></div>
+        <script>
+            require([
+                'jquery',
+                'TrainingAnkit_DailyDeal/js/jquery.countdownTimer'
+            ], function ($) {
+                $("#future_date").countdowntimer({
+                    startDate : "<?php echo str_replace('-','/', date('Y/m/d H:i:s')); ?>",
+                    dateAndTime : "<?php echo str_replace('-','/', $this->getDealTo()); ?>",
+                    size : "lg",
+                    regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+                    regexpReplaceWith: "$1<sup>days</sup> / $2<sup>hours</sup> / $3<sup>minutes</sup> / $4<sup>seconds</sup>"
+                });
             });
-        });
-    </script>
-<?php } ?>
+        </script>
+    <?php
+    } 
+}?>

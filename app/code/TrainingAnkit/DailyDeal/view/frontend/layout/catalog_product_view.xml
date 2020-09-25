@@ -28,7 +28,7 @@
         <referenceContainer name="product.info.main">
             <block class="TrainingAnkit\DailyDeal\Block\Product\View"
                    name="product.info.timer"
-                   as="productInfoCountdown"
+                   as="productInfoCountdown" cacheable="false"
                    template="TrainingAnkit_DailyDeal::product/dailydeal.phtml"
                    after="alert.urls"/>
         </referenceContainer>
