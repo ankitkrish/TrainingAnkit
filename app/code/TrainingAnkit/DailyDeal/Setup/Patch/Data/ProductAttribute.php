@@ -30,11 +30,8 @@ use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
-/**
- * Class ProductAttribute
- * @package TrainingAnkit\DailyDeal\Setup\Patch\Data
- */
-class ProductAttribute implements DataPatchInterface {
+class ProductAttribute implements DataPatchInterface
+{
     /**
      * ModuleDataSetupInterface
      *
@@ -61,7 +58,8 @@ class ProductAttribute implements DataPatchInterface {
     /**
      * {@inheritdoc}
      */
-    public function apply() {
+    public function apply()
+    {
         /** @var EavSetup $eavSetup */
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
         $eavSetup->addAttribute('catalog_product', 'daily_deal_status', [
@@ -79,7 +77,7 @@ class ProductAttribute implements DataPatchInterface {
             'visible_in_advanced_search' => false,
             'is_html_allowed_on_front'   => false,
             'used_for_promo_rules'       => true,
-            'source'                     => 'TrainingAnkit\DailyDeal\Model\Config\Source\Options',
+            'source'                     => 'TrainingAnkit\DailyDeal\Model\Config\Source\Options::class',
             'frontend_class'             => '',
             'global'                     =>  \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
             'unique'                     => false,
@@ -90,9 +88,9 @@ class ProductAttribute implements DataPatchInterface {
              'type' => 'datetime',
              'input' => 'date',
              'label' => 'Deal From',
-             'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime',
+             'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime::class',
              'class' => 'validate-date',
-             'backend' => 'Magento\Catalog\Model\Attribute\Backend\Startdate',
+             'backend' => 'Magento\Catalog\Model\Attribute\Backend\Startdate::class',
              'required' => false,
              'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
              'visible' => true,
@@ -113,9 +111,9 @@ class ProductAttribute implements DataPatchInterface {
             'type' => 'datetime',
             'input' => 'date',
             'label' => 'Deal To',
-            'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime',
+            'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime::class',
             'class' => 'validate-date',
-            'backend' => 'Magento\Catalog\Model\Attribute\Backend\Startdate',
+            'backend' => 'Magento\Catalog\Model\Attribute\Backend\Startdate::class',
             'required' => false,
             'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
             'visible' => true,
@@ -131,18 +129,19 @@ class ProductAttribute implements DataPatchInterface {
             'unique' => false,
             'apply_to'  => 'simple,grouped,configurable,downloadable,virtual,bundle'
         ]);
-
     }
     /**
      * {@inheritdoc}
      */
-    public static function getDependencies() {
+    public static function getDependencies()
+    {
         return [];
     }
     /**
      * {@inheritdoc}
      */
-    public function getAliases() {
+    public function getAliases()
+    {
         return [];
     }
 }

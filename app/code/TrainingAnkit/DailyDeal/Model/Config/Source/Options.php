@@ -24,10 +24,6 @@
  */
 namespace TrainingAnkit\DailyDeal\Model\Config\Source;
 
-/**
- * Class Options
- * @package TrainingAnkit\DailyDeal\Model\Config\Source
- */
 class Options extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
 {
     /**

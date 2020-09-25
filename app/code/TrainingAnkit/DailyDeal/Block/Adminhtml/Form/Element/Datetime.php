@@ -22,17 +22,14 @@
  * @license     http://www.TrainingAnkit.com/license-agreement.html
  * @author      MagentoCoders <info@magentocoders.com>
  */
-
 namespace TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element;
 
 use Magento\Framework\Data\Form\Element\Date;
 
-/**
- * Class DateTime
- * @package TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element
- */
-class DateTime extends Date {
-    public function getElementHtml() {
+class DateTime extends Date
+{
+    public function getElementHtml()
+    {
         $this->setDateFormat($this->localeDate->getDateFormat(\IntlDateFormatter::SHORT));
         $this->setTimeFormat($this->localeDate->getTimeFormat(\IntlDateFormatter::SHORT));
         return parent::getElementHtml();
