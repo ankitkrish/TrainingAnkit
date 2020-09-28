@@ -64,7 +64,11 @@ class Save extends \Magento\Backend\App\Action
      */
     public function execute()
     {
+
+        $data[]='';
         $data = $this->getRequest()->getPostValue();
+        $data['qualification']=implode(',', $data['qualification']);
+        $data['hobby']=implode(',', $data['hobby']);
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
         if ($data) {

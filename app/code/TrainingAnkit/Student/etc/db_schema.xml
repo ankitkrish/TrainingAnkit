@@ -5,14 +5,9 @@
         <column xsi:type="varchar" name="name" nullable="false" length="255" default="" comment="Name"/>
         <column xsi:type="varchar" name="gender" nullable="false" length="255" comment="Gender"/>
         <column xsi:type="text" name="qualification" nullable="false" comment="Qualification"/>
-       <!-- <column xsi:type="boolean" name="hobby" nullable="false" comment="hobby"/>
-        <column xsi:type="boolean" name="city" nullable="false" comment="City"/>
-        <column xsi:type="smallint" name="gender" nullable="false" comment="Gender"/>
-        <column xsi:type="varchar" name="qualification" nullable="false" comment="Qualification"/>
-        <column xsi:type="text" name="description" nullable="false" comment="Description"/>
-        <column xsi:type="text" name="color" nullable="false" comment="Color"/>
-        <column xsi:type="datetime" name="created_at" on_update="false" nullable="false" comment="Created At"/>
-        <column xsi:type="datetime" name="updated_at" on_update="false" nullable="false" comment="Updated At"/>-->
+        <column xsi:type="text" name="hobby" nullable="false" comment="hobby"/>
+        <column xsi:type="varchar" length="255" name="city" nullable="false" comment="City"/>
+        <column xsi:type="varchar" length="255" name="color" nullable="false" comment="Favourite Color"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="student_id"/>
         </constraint>

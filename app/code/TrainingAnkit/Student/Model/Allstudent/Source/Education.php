@@ -9,9 +9,9 @@ class Education implements ArrayInterface
     public function toOptionArray()
     {
         return [
-            ['value' => 1, 'label' => __('Higher Secondary')],
-            ['value' => 2, 'label' => __('Graduation')],
-            ['value' => 3, 'label' => __('Post Graduation')],
+            ['value' => 'higherSecondary', 'label' => __('Higher Secondary')],
+            ['value' => 'Graduation', 'label' => __('Graduation')],
+            ['value' => 'Post Graduation','label' => __('Post Graduation')],
         ];
     }
 }

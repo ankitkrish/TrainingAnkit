@@ -108,7 +108,39 @@
                 <label translate="true">Gender</label>
             </settings>
         </column>
-        <actionsColumn name="actions" sortOrder="40" class="TrainingAnkit\Student\Ui\Component\Listing\Column\AllstudentActions">
+        <column name="qualification" sortOrder="40">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Qualification</label>
+            </settings>
+        </column>
+        <column name="city" component="Magento_Ui/js/grid/columns/select">
+            <settings>
+                <label translate="true">City</label>
+                <options class="TrainingAnkit\Student\Model\Allstudent\Source\City"/>
+                <filter>select</filter>
+                <dataType>select</dataType>
+            </settings>
+        </column>
+        <column name="hobby" sortOrder="40">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Hobby</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" sortOrder="90" class="TrainingAnkit\Student\Ui\Component\Listing\Column\AllstudentActions">
             <settings>
                 <indexField>student_id</indexField>
                 <resizeEnabled>false</resizeEnabled>

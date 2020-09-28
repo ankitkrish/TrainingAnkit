@@ -37,10 +37,19 @@ class Allstudent extends AbstractModel implements AllstudentInterface
     {
         return $this->setData(self::STUDENT_ID, $id);
     }
+    public function setColor($color)
+    {
+        return $this->setData(self::COLOR, $color);
+    }
 
     public function getName()
     {
         return $this->getData(self::NAME);
+    }
+
+    public function getColor()
+    {
+        return $this->getData(self::COLOR);
     }
 
     public function setName($name)
@@ -53,9 +62,29 @@ class Allstudent extends AbstractModel implements AllstudentInterface
         return $this->getData(self::GENDER);
     }
 
+    public function getHobby()
+    {
+        return $this->getData(self::HOBBY);
+    }
+
+    public function getCity()
+    {
+        return $this->getData(self::CITY);
+    }
+
+    public function setCity($city)
+    {
+        return $this->setData(self::CITY, $city);
+    }
+
     public function setGender($gender)
     {
         return $this->setData(self::GENDER, $gender);
+    }
+
+    public function setHobby($hobby)
+    {
+        return $this->setData(self::HOBBY, $hobby);
     }
 
     public function getQualification()

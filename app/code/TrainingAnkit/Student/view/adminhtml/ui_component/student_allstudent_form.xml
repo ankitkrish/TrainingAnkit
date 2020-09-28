@@ -84,14 +84,61 @@
                 </item>
             </argument>
         </field>
-        <field name="education">
+        <field name="qualification">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">TrainingAnkit\Student\Model\Allstudent\Source\Education</item>
                 <item name="config" xsi:type="array">
+                    <item name="required-entry" xsi:type="boolean">true</item>
                     <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">multiselect</item>
                     <item name="source" xsi:type="string">allstudent</item>
                     <item name="label" xsi:type="string" translate="true">Education</item>
+                </item>
+            </argument>
+        </field>
+        <field name="hobby">
+            <argument name="data" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Hobby</item>
+                <item name="options" xsi:type="object">TrainingAnkit\Student\Model\Allstudent\Source\Hobby</item>
+                <item name="config" xsi:type="array">
+                    <item name="required-entry" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Hobbies</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">checkboxset</item>
+                    <item name="source" xsi:type="string">allstudent</item>
+                    <item name="multiple" xsi:type="boolean">true</item>
+                    <item name="dataScope" xsi:type="string">hobby</item>
+                </item>
+            </argument>
+        </field>
+        <field name="city">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">TrainingAnkit\Student\Model\Allstudent\Source\City</item>
+                <item name="config" xsi:type="array">
+                    <item name="required-entry" xsi:type="boolean">true</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="source" xsi:type="string">allstudent</item>
+                    <item name="label" xsi:type="string" translate="true">City</item>
+                </item>
+            </argument>
+        </field>
+        <field name="color">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="required-entry" xsi:type="boolean">true</item>
+                    <item name="component" xsi:type="string">TrainingAnkit_Student/js/form/element/color-select</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="elementTmpl" xsi:type="string">TrainingAnkit_Student/form/element/color-select</item>
+                    <item name="label" xsi:type="string">My Favourite Color </item>
+                    <item name="labelVisible" xsi:type="boolean">true</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">allstudent</item>
                 </item>
             </argument>
         </field>
