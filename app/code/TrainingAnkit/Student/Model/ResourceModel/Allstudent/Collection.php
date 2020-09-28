@@ -23,8 +23,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            'TrainingAnkit\Student\Model\Allstudent',
-            'TrainingAnkit\Student\Model\ResourceModel\Allstudent'
+            \TrainingAnkit\Student\Model\Allstudent::class,
+            \TrainingAnkit\Student\Model\ResourceModel\Allstudent::class
         );
     }
 }

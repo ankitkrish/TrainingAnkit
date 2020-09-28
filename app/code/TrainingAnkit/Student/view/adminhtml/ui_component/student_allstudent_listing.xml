@@ -96,18 +96,19 @@
                 <label translate="true">Name</label>
             </settings>
         </column>
-        <column name="gender" component="Magento_Ui/js/grid/columns/select" sortOrder="40">
+        <column name="gender" sortOrder="30">
             <settings>
-                <options class="TrainingAnkit\Student\Model\Allstudent\Source\Gender"/>
-                <filter>select</filter>
+                <filter>text</filter>
                 <editor>
-                    <editorType>select</editorType>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                    <editorType>text</editorType>
                 </editor>
-                <dataType>select</dataType>
                 <label translate="true">Gender</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="TrainingAnkit\Student\Ui\Component\Listing\Column\AllstudentActions">
+        <actionsColumn name="actions" sortOrder="40" class="TrainingAnkit\Student\Ui\Component\Listing\Column\AllstudentActions">
             <settings>
                 <indexField>student_id</indexField>
                 <resizeEnabled>false</resizeEnabled>
