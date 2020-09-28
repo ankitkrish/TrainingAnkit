@@ -64,21 +64,18 @@ class Save extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-
         $data[]='';
         $data = $this->getRequest()->getPostValue();
-        $data['qualification']=implode(',', $data['qualification']);
-        $data['hobby']=implode(',', $data['hobby']);
+        $data['qualification']=implode(',',$data['qualification']);
+        $data['hobby']=implode(',',$data['hobby']);
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
         if ($data) {
             if (empty($data['student_id'])) {
                 $data['student_id'] = null;
             }
-
             /** @var \TrainingAnkit\Student\Model\Allstudent $model */
             $model = $this->allstudentFactory->create();
-
             $id = $this->getRequest()->getParam('student_id');
             if ($id) {
                 try {
@@ -89,12 +86,10 @@ class Save extends \Magento\Backend\App\Action
                 }
             }
             $model->setData($data);
-
             $this->_eventManager->dispatch(
                 'student_allstudent_prepare_save',
                 ['allstudent' => $model, 'request' => $this->getRequest()]
             );
-
             try {
                 $this->allstudentRepository->save($model);
                 $this->messageManager->addSuccessMessage(__('You saved the student.'));
