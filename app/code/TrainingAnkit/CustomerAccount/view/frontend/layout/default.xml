@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
- * MagentoCoders
- * Copyright (C) 2019 TrainingAnkit <info@magentocoders.com>
+ * Training
+ * Copyright (C) 2019 TrainingAnkit <info@training.com>
  *
  * NOTICE OF LICENSE
  *
@@ -18,9 +18,9 @@
  *
  * @category    TrainingAnkit
  * @package     TrainingAnkit_CustomerAccount
- * @copyright   Copyright (c) 2012 MagentoCoders (http://www.magentocoders.com/)
- * @license     http://www.magentocoders.com/license-agreement.html
- * @author      TrainingAnkit <info@magentocoders.com>
+ * @copyright   Copyright (c) 2012 Training (http://www.training.com/)
+ * @license     http://www.training.com/license-agreement.html
+ * @author      TrainingAnkit <info@training.com>
  */
  */-->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
