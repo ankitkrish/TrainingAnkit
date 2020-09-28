@@ -1,7 +1,7 @@
 <?php
 /**
  * TrainingAnkit
- * Copyright (C) 2019 TrainingAnkit <info@magentocoders.com>
+ * Copyright (C) 2019 TrainingAnkit <info@training.com>
  *
  * NOTICE OF LICENSE
  *
@@ -18,9 +18,9 @@
  *
  * @category    TrainingAnkit
  * @package     TrainingAnkit_DailyDeal
- * @copyright   Copyright (c) 2012 MagentoCoders (http://www.magentocoders.com/)
+ * @copyright   Copyright (c) 2012 Training (http://www.training.com/)
  * @license     http://www.TrainingAnkit.com/license-agreement.html
- * @author      MagentoCoders <info@magentocoders.com>
+ * @author      Training <info@training.com>
  */
 namespace TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element;
 

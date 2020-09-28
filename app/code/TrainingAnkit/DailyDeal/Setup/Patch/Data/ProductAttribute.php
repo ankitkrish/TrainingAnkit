@@ -1,7 +1,7 @@
 <?php
 /**
  * TrainingAnkit
- * Copyright (C) 2019 TrainingAnkit <info@magentocoders.com>
+ * Copyright (C) 2019 TrainingAnkit <info@training.com>
  *
  * NOTICE OF LICENSE
  *
@@ -18,9 +18,9 @@
  *
  * @category    TrainingAnkit
  * @package     TrainingAnkit_DailyDeal
- * @copyright   Copyright (c) 2012 MagentoCoders (http://www.magentocoders.com/)
+ * @copyright   Copyright (c) 2012 Training (http://www.training.com/)
  * @license     http://www.TrainingAnkit.com/license-agreement.html
- * @author      MagentoCoders <info@magentocoders.com>
+ * @author      Training <info@training.com>
  */
 namespace TrainingAnkit\DailyDeal\Setup\Patch\Data;
 
@@ -77,7 +77,7 @@ class ProductAttribute implements DataPatchInterface
             'visible_in_advanced_search' => false,
             'is_html_allowed_on_front'   => false,
             'used_for_promo_rules'       => true,
-            'source'                     => 'TrainingAnkit\DailyDeal\Model\Config\Source\Options',
+            'source'                     => \TrainingAnkit\DailyDeal\Model\Config\Source\Options::class,
             'frontend_class'             => '',
             'global'                     =>  \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
             'unique'                     => false,
@@ -88,9 +88,9 @@ class ProductAttribute implements DataPatchInterface
              'type' => 'datetime',
              'input' => 'date',
              'label' => 'Deal From',
-             'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime',
+             'input_renderer' => \TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime::class,
              'class' => 'validate-date',
-             'backend' => 'Magento\Catalog\Model\Attribute\Backend\Startdate',
+             'backend' => \Magento\Catalog\Model\Attribute\Backend\Startdate::class,
              'required' => false,
              'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
              'visible' => true,
@@ -111,9 +111,9 @@ class ProductAttribute implements DataPatchInterface
             'type' => 'datetime',
             'input' => 'date',
             'label' => 'Deal To',
-            'input_renderer' => 'TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime',
+            'input_renderer' => \TrainingAnkit\DailyDeal\Block\Adminhtml\Form\Element\Datetime::class,
             'class' => 'validate-date',
-            'backend' => 'Magento\Catalog\Model\Attribute\Backend\Startdate',
+            'backend' => \Magento\Catalog\Model\Attribute\Backend\Startdate::class,
             'required' => false,
             'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
             'visible' => true,
