@@ -13,10 +13,6 @@ use TrainingAnkit\Student\Model\ResourceModel\Allstudent as ResourceAllstudent;
 use TrainingAnkit\Student\Model\ResourceModel\Allstudent\CollectionFactory as AllstudentCollectionFactory;
 use Magento\Store\Model\StoreManagerInterface;
 
-/**
- * Class AllstudentRepository
- * @package TrainingAnkit\Student\Model
- */
 class AllstudentRepository implements AllstudentRepositoryInterface
 {
     protected $resource;

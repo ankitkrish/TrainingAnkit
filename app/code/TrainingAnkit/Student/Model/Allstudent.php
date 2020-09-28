@@ -38,7 +38,6 @@ class Allstudent extends AbstractModel implements AllstudentInterface
         return $this->setData(self::STUDENT_ID, $id);
     }
 
-
     public function getName()
     {
         return $this->getData(self::NAME);
@@ -68,5 +67,4 @@ class Allstudent extends AbstractModel implements AllstudentInterface
     {
         return $this->setData(self::QUALIFICATION, $qualification);
     }
-
 }

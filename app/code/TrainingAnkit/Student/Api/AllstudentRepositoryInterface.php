@@ -1,13 +1,10 @@
 <?php
 namespace TrainingAnkit\Student\Api;
-/**
- * Interface AllstudentRepositoryInterface
- * @package TrainingAnkit\Student\Api
- */
+
 interface AllstudentRepositoryInterface
 {
 
-	public function save(\TrainingAnkit\Student\Api\Data\AllstudentInterface $blog);
+    public function save(\TrainingAnkit\Student\Api\Data\AllstudentInterface $blog);
 
     /**
      * @param $studentId

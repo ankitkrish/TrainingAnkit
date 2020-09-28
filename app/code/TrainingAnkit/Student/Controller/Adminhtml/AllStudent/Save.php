@@ -38,21 +38,23 @@ class Save extends \Magento\Backend\App\Action
     ) {
         $this->dataPersistor = $dataPersistor;
         $this->allstudentFactory = $allstudentFactory
-            ?: \Magento\Framework\App\ObjectManager::getInstance()->get(\TrainingAnkit\Student\Model\AllstudentFactory::class);
+            ?: \Magento\Framework\App\ObjectManager::getInstance()
+                ->get(\TrainingAnkit\Student\Model\AllstudentFactory::class);
         $this->allstudentRepository = $allstudentRepository
-            ?: \Magento\Framework\App\ObjectManager::getInstance()->get(\TrainingAnkit\Student\Api\AllstudentRepositoryInterface::class);
+            ?: \Magento\Framework\App\ObjectManager::getInstance()
+                ->get(\TrainingAnkit\Student\Api\AllstudentRepositoryInterface::class);
         parent::__construct($context);
     }
-	
-	/**
+    
+    /**
      * Authorization level
      *
      * @see _isAllowed()
      */
-	protected function _isAllowed()
-	{
-		return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
-	}
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
+    }
 
     /**
      * Save action

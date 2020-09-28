@@ -6,7 +6,7 @@ use Magento\Backend\App\Action;
 
 class Edit extends \Magento\Backend\App\Action
 {
-	/**
+    /**
      * Core registry
      *
      * @var \Magento\Framework\Registry
@@ -32,16 +32,16 @@ class Edit extends \Magento\Backend\App\Action
         $this->_coreRegistry = $registry;
         parent::__construct($context);
     }
-	
-	/**
+    
+    /**
      * Authorization level
      *
      * @see _isAllowed()
      */
-	protected function _isAllowed()
-	{
-		return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
-	}
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
+    }
 
     /**
      * Init actions

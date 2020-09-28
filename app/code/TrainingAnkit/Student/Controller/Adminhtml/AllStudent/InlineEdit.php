@@ -24,16 +24,16 @@ class InlineEdit extends \Magento\Backend\App\Action
         $this->allstudentRepository = $allstudentRepository;
         $this->jsonFactory = $jsonFactory;
     }
-	
-	/**
+    
+    /**
      * Authorization level
      *
      * @see _isAllowed()
      */
-	protected function _isAllowed()
-	{
-		return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
-	}
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
+    }
 
     /**
      * @return \Magento\Framework\Controller\ResultInterface
@@ -86,8 +86,11 @@ class InlineEdit extends \Magento\Backend\App\Action
         return '[Student ID: ' . $student->getId() . '] ' . $errorText;
     }
 
-    public function setStudentData(\TrainingAnkit\Student\Model\Allstudent $student, array $extendedstudentData, array $studentData)
-    {
+    public function setStudentData(
+        \TrainingAnkit\Student\Model\Allstudent $student,
+        array $extendedstudentData,
+        array $studentData
+    ) {
         $student->setData(array_merge($student->getData(), $extendedStudentData, $studentData));
         return $this;
     }

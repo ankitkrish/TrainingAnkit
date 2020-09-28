@@ -4,9 +4,6 @@ namespace TrainingAnkit\Student\Block\Adminhtml\Allstudent\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
-/**
- * Class BackButton
- */
 class BackButton extends GenericButton implements ButtonProviderInterface
 {
     /**

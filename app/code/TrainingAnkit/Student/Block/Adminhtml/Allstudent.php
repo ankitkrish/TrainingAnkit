@@ -1,10 +1,6 @@
 <?php
 namespace TrainingAnkit\Student\Block\Adminhtml;
 
-/**
- * Class Allstudent
- * @package TrainingAnkit\Student\Block\Adminhtml
- */
 class Allstudent extends \Magento\Backend\Block\Widget\Grid\Container
 {
 

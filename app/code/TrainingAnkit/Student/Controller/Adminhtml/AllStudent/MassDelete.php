@@ -7,9 +7,6 @@ use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 use TrainingAnkit\Student\Model\ResourceModel\Allstudent\CollectionFactory;
 
-/**
- * Class MassDelete
- */
 class MassDelete extends \Magento\Backend\App\Action
 {
     /**
@@ -33,16 +30,16 @@ class MassDelete extends \Magento\Backend\App\Action
         $this->collectionFactory = $collectionFactory;
         parent::__construct($context);
     }
-	
-	/**
+    
+    /**
      * Authorization level
      *
      * @see _isAllowed()
      */
-	protected function _isAllowed()
-	{
-		return $this->_authorization->isAllowed('TrainingAnkit_Student::student_delete');
-	}
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('TrainingAnkit_Student::student_delete');
+    }
 
     /**
      * Execute action
@@ -53,7 +50,7 @@ class MassDelete extends \Magento\Backend\App\Action
     public function execute()
     {
         $collection = $this->filter->getCollection($this->collectionFactory->create());
-				
+                
         $collectionSize = $collection->getSize();
 
         foreach ($collection as $student) {

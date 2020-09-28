@@ -6,10 +6,6 @@ use Magento\Backend\Block\Widget\Context;
 use TrainingAnkit\Student\Api\AllstudentRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 
-/**
- * Class GenericButton
- * @package TrainingAnkit\Student\Block\Adminhtml\Allstudent\Edit
- */
 class GenericButton
 {
     protected $context;
@@ -38,10 +34,9 @@ class GenericButton
             return $this->allstudentRepository->getById(
                 $this->context->getRequest()->getParam('student_id')
             )->getId();
+        } catch (NoSuchEntityException $e) {
+            return false;
         }
-		catch (NoSuchEntityException $e) {
-        
-		}
         return null;
     }
 

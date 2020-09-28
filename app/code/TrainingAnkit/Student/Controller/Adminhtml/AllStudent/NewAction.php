@@ -19,16 +19,16 @@ class NewAction extends \Magento\Backend\App\Action
         $this->resultForwardFactory = $resultForwardFactory;
         parent::__construct($context);
     }
-	
-	/**
+    
+    /**
      * Authorization level
      *
      * @see _isAllowed()
      */
-	protected function _isAllowed()
-	{
-		return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
-	}
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('TrainingAnkit_Student::save');
+    }
 
     /**
      * Forward to edit

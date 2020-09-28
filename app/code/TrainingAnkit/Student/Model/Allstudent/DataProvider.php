@@ -4,9 +4,6 @@ namespace TrainingAnkit\Student\Model\Allstudent;
 use TrainingAnkit\Student\Model\ResourceModel\Allstudent\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 
-/**
- * Class DataProvider
- */
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
 

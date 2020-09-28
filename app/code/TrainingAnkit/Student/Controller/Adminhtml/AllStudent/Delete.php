@@ -9,12 +9,12 @@ class Delete extends \Magento\Backend\App\Action
      *
      * @see _isAllowed()
      */
-	protected function _isAllowed()
-	{
-		return $this->_authorization->isAllowed('TrainingAnkit_Student::student_delete');
-	}
-	
-	/**
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('TrainingAnkit_Student::student_delete');
+    }
+    
+    /**
      * Delete action
      *
      * @return \Magento\Backend\Model\View\Result\Redirect
