@@ -20,6 +20,7 @@ interface AllstudentInterface
     public function getHobby();
 
     public function getCity();
+
     public function getColor();
 
     public function getQualification();
