@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TrainingAnkit
  * Copyright (C) 2019 TrainingAnkit <info@training.com>
@@ -32,10 +33,6 @@ use Magento\Customer\Model\Session;
 use Magento\Framework\View\Element\Template;
 use Magento\Store\Model\ScopeInterface;
 
-/**
- * Class Login
- * @package TrainingAnkit\CustomerAccount\Block\Form
- */
 class Login extends Template
 {
     /**
@@ -54,10 +51,12 @@ class Login extends Template
      * @var Registration
      */
     protected $registration;
+
     /**
      * @var \Magento\Framework\View\Element\Template\Context
      */
     private $context;
+
     /**
      * @var array
      */

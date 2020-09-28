@@ -1,5 +1,5 @@
 <?php
-
+// @codingStandardsIgnoreFile
  /** @var \TrainingAnkit\CustomerAccount\Block\Form\Login $block */
 ?>
 <?php if (!$block->customerIsAlreadyLoggedIn()): ?>
@@ -29,13 +29,13 @@
                         <div class="field email required">
                             <label class="label" for="email"><span><?php /* @escapeNotVerified */ echo __('Email') ?></span></label>
                             <div class="control">
-                                <input name="username" value="" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> id="email-login" type="email" class="input-text" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" data-validate="{required:true, 'validate-email':true}">
+                                <input name="username" value="" <?php if ($block->isAutocompleteDisabled()):?> autocomplete="off"<?php endif; ?> id="email-login" type="email" class="input-text" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" data-validate="{required:true, 'validate-email':true}">
                             </div>
                         </div>
                         <div class="field password required">
                             <label for="pass" class="label"><span><?php /* @escapeNotVerified */ echo __('Password') ?></span></label>
                             <div class="control">
-                                <input name="password" type="password" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> class="input-text" id="pass-login" title="<?php /* @escapeNotVerified */ echo __('Password') ?>" data-validate="{required:true}" >
+                                <input name="password" type="password" <?php if ($block->isAutocompleteDisabled()):?> autocomplete="off"<?php endif; ?> class="input-text" id="pass-login" title="<?php /* @escapeNotVerified */ echo __('Password') ?>" data-validate="{required:true}" >
                             </div>
                         </div>
                         <div class="actions-toolbar">

@@ -53,10 +53,6 @@ use Magento\Framework\UrlInterface;
 use Magento\Newsletter\Model\SubscriberFactory;
 use Magento\Store\Model\StoreManagerInterface;
 
-/**
- * Class Register
- * @package TrainingAnkit\CustomerAccount\Controller\Customer\Ajax
- */
 class Register extends Action
 {
     /**
@@ -294,7 +290,8 @@ class Register extends Action
                     $response = [
                         'errors' => true,
                         'message' => __(
-                            'You must confirm your account. Please check your email for the confirmation link or <a href="%1">click here</a> for a new link.',
+                            'You must confirm your account. Please check your email for the 
+                             confirmation link or <a href="%1">click here</a> for a new link.',
                             $email
                         )
                     ];
@@ -305,7 +302,8 @@ class Register extends Action
                         'message' => $this->getSuccessMessage()
                     ];
                     $requestedRedirect = $this->accountRedirect->getRedirectCookie();
-                    if (!$this->scopeConfig->getValue('customer/startup/redirect_dashboard') && $requestedRedirect) {
+                    if (!$this->scopeConfig->getValue('customer/startup/redirect_dashboard')
+                        && $requestedRedirect) {
                         $response['redirectUrl'] = $this->_redirect->success($requestedRedirect);
                         $this->accountRedirect->clearRedirectCookie();
                     }
@@ -320,7 +318,9 @@ class Register extends Action
                 $response = [
                     'errors' => true,
                     'message' => __(
-                        'There is already an account with this email address. If you are sure that it is your email address, <a href="%1">click here</a> to get your password and access your account.',
+                        'There is already an account with this email address. If you are sure 
+                         that it is your email address, <a href="%1">click here</a> to get your 
+                         password and access your account.',
                         $url
                     )
                 ];

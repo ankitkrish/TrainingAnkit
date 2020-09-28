@@ -37,10 +37,6 @@ use Magento\Framework\DataObject;
 use Magento\Framework\Json\EncoderInterface;
 use Magento\Framework\Module\Manager;
 
-/**
- * Class Register
- * @package TrainingAnkit\CustomerAccount\Block\Form
- */
 class Register extends \Magento\Directory\Block\Data
 {
     /**
