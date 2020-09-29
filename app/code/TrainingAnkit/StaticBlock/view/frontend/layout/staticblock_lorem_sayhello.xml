@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="content">
+        <block class="Magento\Cms\Block\Block" name="loren_block_1">
+            <arguments>
+                <argument name="block_id" xsi:type="string">loren_block_1</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceContainer name="sidebar.additional" >
+        <block class="Magento\Cms\Block\Block" name="loren_block_2" >
+            <arguments>
+                <argument name="block_id" xsi:type="string">loren_block_2</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+   <referenceContainer name="sidebar.main" >
+        <block class="Magento\Cms\Block\Block" name="loren_block_3" >
+            <arguments>
+                <argument name="block_id" xsi:type="string">loren_block_3</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceBlock name="catalog.compare.sidebar" remove="true" />
+    <referenceBlock name="wishlist_sidebar" remove="true" />
+</body>
+</page>
