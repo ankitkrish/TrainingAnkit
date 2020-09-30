@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">loginip_allcustomer_form.allcustomer_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Customer Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save_and_continue" class="TrainingAnkit\Loginip\Block\Adminhtml\Allcustomer\Edit\SaveAndContinueButton"/>
+            <button name="save" class="TrainingAnkit\Loginip\Block\Adminhtml\Allcustomer\Edit\SaveButton"/>
+            <button name="reset" class="TrainingAnkit\Loginip\Block\Adminhtml\Allcustomer\Edit\ResetButton"/>
+            <button name="delete" class="TrainingAnkit\Loginip\Block\Adminhtml\Allcustomer\Edit\DeleteButton"/>
+            <button name="back" class="TrainingAnkit\Loginip\Block\Adminhtml\Allcustomer\Edit\BackButton"/>
+        </buttons>
+        <namespace>loginip_allcustomer_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>loginip_allcustomer_form.allcustomer_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="allcustomer_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="loginip/allcustomer/save"/>
+        </settings>
+        <dataProvider class="TrainingAnkit\Loginip\Model\Allcustomer\DataProvider" name="allcustomer_form_data_source">
+            <settings>
+                <requestFieldName>customer_id</requestFieldName>
+                <primaryFieldName>customer_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field name="customer_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">allcustomer</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>customer_id</dataScope>
+            </settings>
+        </field>
+        <field name="name" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">allcustomer</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Customer Name</label>
+                <dataScope>name</dataScope>
+            </settings>
+        </field>
+        <field name="address" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">allcustomer</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">IP Address</label>
+                <dataScope>address</dataScope>
+            </settings>
+        </field>
+    </fieldset>
+</form>

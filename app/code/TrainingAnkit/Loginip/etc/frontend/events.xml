@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../vendor/magento/framework/Event/etc/events.xsd">
+   <!-- <event name="customer_login">
+        <observer name="trainingankit_loginip_customer_login" instance="TrainingAnkit\Loginip\Observer\Customerlogin"/>
+    </event>-->
+    <event name="controller_action_predispatch">
+        <observer name="trainingankit_loginip_customer_login" instance="TrainingAnkit\Loginip\Observer\Customerlogin" />
+    </event>
+</config>

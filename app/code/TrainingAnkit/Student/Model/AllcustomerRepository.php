@@ -9,7 +9,7 @@ use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Reflection\DataObjectProcessor;
-use TrainingAnkit\Student\Model\ResourceModel\Allstudent as ResourceAllstudent;
+use TrainingAnkit\Student\Model\ResourceModel\Allcustomer as ResourceAllstudent;
 use TrainingAnkit\Student\Model\ResourceModel\Allstudent\CollectionFactory as AllstudentCollectionFactory;
 use Magento\Store\Model\StoreManagerInterface;
 
@@ -77,7 +77,7 @@ class AllstudentRepository implements AllstudentRepositoryInterface
 
     /**
      * @param $studentId
-     * @return Allstudent|mixed
+     * @return Allcustomer|mixed
      * @throws NoSuchEntityException
      */
     public function getById($studentId)

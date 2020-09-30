@@ -3,6 +3,6 @@
     <menu>
         <add id="TrainingAnkit_Loginip::trainingankit" title="Training Ankit" translate="title" module="TrainingAnkit_Loginip" sortOrder="90" dependsOnModule="TrainingAnkit_Loginip" resource="TrainingAnkit_Loginip::trainingankit"/>
         <add id="TrainingAnkit_Loginip::loginip" title="Login IP" translate="title" module="TrainingAnkit_Loginip" parent="TrainingAnkit_Loginip::trainingankit" sortOrder="50" dependsOnModule="TrainingAnkit_Loginip" resource="TrainingAnkit_Loginip::loginip"/>
-        <add id="TrainingAnkit_Loginip::loginip_allcustomer" title="All Customer" translate="title" module="TrainingAnkit_Loginip" parent="TrainingAnkit_Loginip::loginip" sortOrder="10" dependsOnModule="TrainingAnkit_Loginip" action="loginip/allcustoemr" resource="TrainingAnkit_Loginip::loginip_allcustoemr"/>
+        <add id="TrainingAnkit_Loginip::loginip_allcustomer" title="All Customer" translate="title" module="TrainingAnkit_Loginip" parent="TrainingAnkit_Loginip::loginip" sortOrder="10" dependsOnModule="TrainingAnkit_Loginip" action="loginip/allcustomer" resource="TrainingAnkit_Loginip::loginip_allcustoemr"/>
     </menu>
 </config>

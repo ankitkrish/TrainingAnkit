@@ -14,7 +14,7 @@ class Allstudent extends AbstractModel implements AllstudentInterface
 
     protected function _construct()
     {
-        $this->_init(\TrainingAnkit\Student\Model\ResourceModel\Allstudent::class);
+        $this->_init(\TrainingAnkit\Student\Model\ResourceModel\Allcustomer::class);
     }
 
     public function getIdentities()
