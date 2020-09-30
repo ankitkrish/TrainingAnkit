@@ -17,7 +17,7 @@
  * version in the future.
  *
  * @category    TrainingAnkit
- * @package     TrainingAnkit_CustomerAccount
+ * @package     TrainingAnkit_StudentAccount
  * @copyright   Copyright (c) 2012 Training (http://www.training.com/)
  * @license     http://www.TrainingAnkit.com/license-agreement.html
  * @author      Training <info@Training.com>
