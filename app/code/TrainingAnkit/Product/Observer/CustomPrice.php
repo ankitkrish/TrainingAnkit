@@ -22,15 +22,15 @@ class CustomPrice implements ObserverInterface
     protected $cart;
 
     public function __construct(
-         ScopeConfigInterface $scopeConfig,
-         CustomerCart $cart
-     )
-     {
+        ScopeConfigInterface $scopeConfig,
+        CustomerCart $cart
+    ) {
          $this->scopeConfig = $scopeConfig;
          $this->cart = $cart;
-     }
+    }
 
-    public function execute(Observer $observer) {
+    public function execute(Observer $observer)
+    {
 
         $item = $observer->getEvent()->getQuoteItem();
         $item->getQuote()->collectTotals();
