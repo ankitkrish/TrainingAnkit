@@ -1,4 +1,10 @@
 <?php
-use Magento\Framework\Component\ComponentRegistrar;
-
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'TrainingAnkit_OrderComment', __DIR__);
+/**
+ * Copyright © TrainingAnkit. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ \Magento\Framework\Component\ComponentRegistrar::register(
+     \Magento\Framework\Component\ComponentRegistrar::MODULE,
+     'TrainingAnkit_OrderComment',
+     __DIR__
+ );

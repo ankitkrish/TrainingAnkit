@@ -1,20 +1,14 @@
 {
-    "name": "trainingankit/module-ordercomment",
-    "description": "Order comment field add on checkout field",
+    "name": "trainingankit/ordercomment",
+    "description": "Order Comment for Magento 2 by TrainingAnkit",
     "type": "magento2-module",
-    "license": "proprietary",
-    "authors": [
-        {
-            "email": "info@mage2gen.com",
-            "name": "Mage2Gen"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {},
+    "version": "1.0.0",
+    "require": {
+        "magento/framework": ">100.0",
+        "magento/module-quote": ">100.0"
+    },
     "autoload": {
-        "files": [
-            "registration.php"
-        ],
+        "files": [ "registration.php" ],
         "psr-4": {
             "TrainingAnkit\\OrderComment\\": ""
         }
